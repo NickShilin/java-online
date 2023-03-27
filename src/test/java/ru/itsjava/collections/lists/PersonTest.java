@@ -40,8 +40,11 @@ public class PersonTest {
     public void shouldCheckAgeForAlcohol(){
         Person actualPerson = new Person(DEFAULT_NAME, DEFAULT_AGE);
         Person newPerson = new Person(NEW_NAME, NEW_AGE);
-        assertFalse(newPerson.takeBeer());
-        assertTrue(actualPerson.takeBeer());
-        assertFalse(ADULT <= newPerson.getAge());
+//        assertFalse(newPerson.takeBeer());
+//        assertTrue(actualPerson.takeBeer());
+//        assertFalse(ADULT <= newPerson.getAge());
+        assertAll("actualPerson", () -> assertFalse(newPerson.takeBeer()),() -> assertTrue(actualPerson.takeBeer()),
+                () -> assertFalse(ADULT <= newPerson.getAge()));
+
     }
 }
