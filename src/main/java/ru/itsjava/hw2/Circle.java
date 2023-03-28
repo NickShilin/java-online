@@ -5,7 +5,6 @@ import lombok.AllArgsConstructor;
 @AllArgsConstructor
 public class Circle extends Figure {
     private int r;
-    public static final double PI = 3.14159265;
 
 
     public void printSquare() {
